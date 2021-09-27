@@ -1,43 +1,46 @@
+body{
+   margin: 0;
+}
 .header {
    font-family: 'Montserrat', sans-serif;
 }
 .header__inner {
    display: flex;
    justify-content: space-between;
-   width: 1800px;
+   width: 1600px;
    margin: 0 auto;
    background-color: #1F2326;
+   border-radius: 32px 32px 0px 0px;
 }
 .header__inner__left{
    width: 65%;
    display: flex;
-   justify-content: space-between;
 }
 .header__logo {
    display: flex;
 }
 .logo {
-   margin: 20px 60px;
-   width: 90px;
-   height: 90px;
+   margin: 15px 35px;
+   width: 60px;
+   height: 60px;
 }
 .logo__stick {
-   height: 45px;
+   height: 30px;
    width: 2px;
    background-color: #fff;
-   margin: auto 0 auto 0;
+   margin: auto 100px auto 0;
 }
 .header__nav {
    display: flex;
    margin: auto 0;
 }
 .nav__link {
-   padding-left: 60px;
+   padding-left: 50px;
    text-decoration: none;
    color: #fff;
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 14px;
+   font-size: 10px;
    text-transform: uppercase;
 }
 .nav__link:hover{
@@ -45,11 +48,11 @@
 }
 .header__account {
    display: flex;
-   margin: auto 100px auto 0;
+   margin: auto 60px auto 0;
 }
 .account__img {
-   width: 42px;
-   height: 42px;
+   width: 32px;
+   height: 32px;
    margin-right: 15px;
    border-radius: 50%;
 }
@@ -58,7 +61,7 @@
    color: #fff;
    font-family: 'Montserrat', sans-serif;
    font-weight: 700;
-   font-size: 14px;
+   font-size: 10px;
    text-transform: uppercase;
 }
 .account__name:hover{
@@ -69,8 +72,7 @@
    background-repeat:no-repeat;
    background-position: center center;
    background-image: url(https://cutewallpaper.org/21/minecraft-2560-x-1440/2560x1440-Minecraft-3-1440P-Resolution-HD-4k-Wallpapers-.jpg); /* Фоновый цвет и фоновый рисунок*/;
-   width: 1800px;
-   height: 1200px;
+   width: 1600px;
    margin: 0 auto;
 }
 .intro__inner{
@@ -83,36 +85,102 @@
 }
 .intro__title{
    font-weight: 600;
-   font-size: 115px;
-   letter-spacing: 7px;
+   font-size: 90px;
+   letter-spacing: 5px;
    color: transparent;
-   margin-top: 140px;
-   margin-left: 150px;
+   margin-top: 90px;
+   margin-left: 70px;
    writing-mode: vertical-lr;
    -webkit-text-stroke: 1px white;
 }
 .intro__column {
    display: flex;
-   margin-top: 100px;
-   justify-content: space-between;
+   margin-top: 65px;
 }
 .column__item {
    position: relative;
-   margin-left: 100px;
+   margin-left: 85px;
+}
+.column__item:first-child{
+   margin-left: 50px;
 }
 .column__item_img {
-   height: 800px;
+   height: 600px;
    width: 270px;
 }
 .column__item_text {
    font-weight: 600;
-   font-size: 60px;
+   font-size: 40px;
    text-align: center;
    letter-spacing: 0.1em;
    color: transparent;
    position: absolute;
    top: 30px;
-   left: -100px;
+   left: -65px;
    writing-mode: vertical-lr;
    -webkit-text-stroke: 1px white;
+}
+
+.intro__main{
+   background: rgba(52, 180, 73, 0.85);
+}
+.main__container{
+   position: relative;
+   left: -120px;
+   display: flex;
+}
+.main__item {
+   display: flex;
+   width: 450px;
+   height: 170px;
+   background: #F8F8F8;
+   border: 1px solid #000000;
+   box-sizing: border-box;
+   margin-left: 50px;
+}
+.main__item_text {
+   width: 250px;
+   padding-left: 15px;
+   margin-right: 15px;
+   padding-top: 15px;
+}
+.main__item_title {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 23px;
+   color: #C4C4C4;
+   margin-bottom: 0;
+}
+.main__item_subtitle {
+   margin-top: 10px;
+   color: #1F2326;
+   padding-left: 6px;
+   font-weight: normal;
+   letter-spacing: 0.1em;
+}
+.main__item_img {
+   position: relative;
+   width: 200px;
+}
+.main__item_img img{
+   height: 100px;
+   width: 100px;
+   position: absolute;
+   top: 30px;
+   right: 50px;
+}
+.main__item_square {
+   position: absolute;
+   bottom: 0;
+   height: 120px;
+   width: 120px;
+   background: #34B449;
+}
+
+.footer{
+   height: 80px;
+   background: #F8F8F8;
+   width: 1600px;
+   margin: 0 auto;
+   border-radius: 0px 0px 32px 32px;
 }
