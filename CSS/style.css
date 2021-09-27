@@ -67,6 +67,108 @@ body{
 .account__name:hover{
    color: #34B449;
 }
+
+/* Квадратики ебаные */
+
+.two-small__first{
+   position: absolute;
+   display: flex;
+   top: 50px;
+   left: 220px;
+}
+.two-small__second{
+   position: absolute;
+   display: flex;
+   bottom: 0px;
+   right: 225px;
+}
+.one-small__first{
+   position: absolute;
+   top: 265px;
+   left: 30px;
+}
+.one-small__second{
+   position: absolute;
+   top: 195px;
+   left: 910px;
+}
+.small {
+   width: 5px;
+   height: 5px;
+   background: #1F2326;
+   opacity: 0.5;
+   margin-left: 17px;
+}
+.one-big__first {
+   position: absolute;
+   top: 45px;
+   left: 500px;
+}
+.one-big__second{
+   position: absolute;
+   top: 630px;
+   left: 600px;
+}
+.one-big__third{
+   position: absolute;
+   bottom: 5px;
+   right: 25px;
+}
+.one-big__fourth{
+   position: absolute;
+   top: 230px;
+   left: 1260px;
+}
+.big {
+   width: 25px;
+   height: 25px;
+   background: #1F2326;
+   opacity: 0.5;
+}
+
+.long-stick__first {
+   position: absolute;
+   top: 40px;
+   right: 300px;
+}
+.long_stick {
+   width: 165px;
+   height: 5px;
+   background: #1F2326;
+   opacity: 0.5;
+}
+.long-stick__secong {
+   position: absolute;
+   bottom: -20px;
+   left: 40px;
+}
+.short-stick__first {
+   position: absolute;
+   top: 105px;
+   left: 35px;
+}
+.short_stick {
+   width: 30px;
+   height: 5px;
+   background: #1F2326;
+   opacity: 0.5;
+}
+.short-stick__second {
+   position: absolute;
+   top: 105px;
+   left: 890px;
+}
+.short-stick__third {
+   position: absolute;
+   top: 600px;
+   left: 895px;
+}
+.short-stick__fourth{
+   position: absolute;
+   top: 450px;
+   left: 1330px;
+}
+
 .intro{
    font-family: 'Montserrat', sans-serif;
    background-repeat:no-repeat;
@@ -85,7 +187,7 @@ body{
 }
 .intro__title{
    font-weight: 600;
-   font-size: 90px;
+   font-size: 87px;
    letter-spacing: 5px;
    color: transparent;
    margin-top: 90px;
@@ -125,21 +227,51 @@ body{
    background: rgba(52, 180, 73, 0.85);
 }
 .main__container{
+   width: 1700px;
    position: relative;
-   left: -120px;
+   left: -140px;
    display: flex;
+   top: 70px;
+   height: 190px;
 }
 .main__item {
    display: flex;
-   width: 450px;
+   width: 435px;
    height: 170px;
-   background: #F8F8F8;
-   border: 1px solid #000000;
+
    box-sizing: border-box;
    margin-left: 50px;
+   background: linear-gradient(135deg, transparent, transparent 10px, #F8F8F8 10px, #F8F8F8 10px);
+   border-bottom: 1px solid #000;
+   border-right: 1px solid #000;
+   position: relative;
+   z-index:1;
+}
+.triangle{
+   border-bottom: 1px solid black;
+   width:20px;
+   height: 20px;
+   position:absolute;
+   top:-10px;
+   left:-10px;
+   -webkit-transform: rotate(-45deg);
+}
+.left_line{
+   position: absolute;
+   height: 156px;
+   border-left: 1px solid black;
+   left: 0;
+   bottom: 0;
+}
+.top_line{
+   position: absolute;
+   width: 421px;
+   border-top: 1px solid black;
+   right: 0;
+   top: 0;
 }
 .main__item_text {
-   width: 250px;
+   width: 235px;
    padding-left: 15px;
    margin-right: 15px;
    padding-top: 15px;
@@ -177,8 +309,57 @@ body{
    background: #34B449;
 }
 
+.main__enter {
+   background: linear-gradient(135deg, transparent, transparent 10px, #1F2326 10px, #1F2326 10px);
+   /* background: #1F2326; */
+   border-right: 1px solid #FFFFFF;
+   border-bottom: 1px solid #ffffff;
+   width: 420px;
+   margin-left: 50px;
+   text-align: center;
+   height: 170px;
+   position: relative;
+}
+.triangle_enter{
+   border-bottom: 1px solid white;
+   width:20px;
+   height: 20px;
+   position:absolute;
+   top:-10px;
+   left:-10px;
+   -webkit-transform: rotate(-45deg);
+}
+.left_line_enter{
+   position: absolute;
+   height: 156px;
+   border-left: 1px solid white;
+   left: 0;
+   bottom: 0;
+}
+.top_line_enter{
+   position: absolute;
+   width: 180px;
+   border-top: 1px solid white;
+   right: 0;
+   top: 0;
+}
+.enter__img {
+   margin-top: 20px;
+   width: 90px;
+   height: 90px;
+}
+.enter__text {
+   font-weight: 600;
+   font-size: 30px;
+   text-align: center;
+   letter-spacing: 0.1em;
+   color: transparent;
+   -webkit-text-stroke: 1px #34B449;
+   margin: 0;
+}
+
 .footer{
-   height: 80px;
+   height: 100px;
    background: #F8F8F8;
    width: 1600px;
    margin: 0 auto;
