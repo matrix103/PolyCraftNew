@@ -149,6 +149,7 @@ body{
    font-weight: 700;
    font-size: 10px;
    text-transform: uppercase;
+   cursor: pointer;
 }
 .account__name:hover{
    color: #34B449;
@@ -184,6 +185,10 @@ body{
    background: #1F2326;
    opacity: 0.5;
    margin-left: 17px;
+   animation-name: rotation;
+   animation-duration: 5s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
 }
 .one-big__first {
    position: absolute;
@@ -357,9 +362,9 @@ body{
    top: 0;
 }
 .main__item_text {
-   width: 235px;
+   width: 270px;
    padding-left: 15px;
-   margin-right: 15px;
+   /* margin-right: 15px; */
    padding-top: 15px;
 }
 .main__item_title {
@@ -412,7 +417,7 @@ body{
    position: relative;
 }
 .main__enter_inner:hover{
-   background: linear-gradient(135deg, transparent, transparent 10px, #505155 10px, #505155 10px);
+   opacity: 0.95;
 }
 .triangle_enter{
    border-bottom: 1px solid white;
@@ -457,6 +462,14 @@ body{
    100% { background-color: transparent; box-shadow: 0 10px 40px #000; }
    }
 
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
 
 .footer{
    height: 100px;
@@ -464,4 +477,298 @@ body{
    width: 1600px;
    margin: 0 auto;
    border-radius: 0px 0px 32px 32px;
+}
+
+/* ПОПАП */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.clean_form_block * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clean_form_block *:before, .clean_form_block *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.overlay_clean {
+    background: rgba(0, 0, 0, 0.6);;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+.clean_form_block {
+    font-family: 'Open Sans', sans-serif;
+    visibility: visible;
+    display: none;
+}
+
+.clean_form {
+    width: 395px;
+    margin: 100px auto 140px auto;
+    box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    z-index: 999;
+}
+
+.clean_form_block.show_form .clean_form {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.border_top_clean_form {
+   width: 100%;
+   height: 6px;
+   float: left;
+   background: #23c659;
+   border-radius: 4px 4px 0 0;
+}
+
+.clean_forms {
+    clear: both;
+}
+
+.body_clean_form {
+    background: #fff;
+    position: relative;
+}
+
+.title_clean_form {
+    font-weight: 700;
+    font-size: 24px;
+    color: #464646;
+    padding: 24px 0 0 27px;
+}
+
+.description_clean_form {
+    font-size: 14px;
+    color: #666;
+    padding: 0 29px 0 28px;
+    line-height: 16px;
+}
+
+.border_clean_form_1 {
+    border-bottom: 1px solid #e4e4e4;
+    margin: 18px 0 0 0;
+}
+
+.powered_malcov {
+    position: absolute;
+    bottom: -42px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+    -webkit-transform: translateY(-20%);
+    -moz-transform: translateY(-20%);
+    -ms-transform: translateY(-20%);
+    transform: translateY(-20%);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.powered_malcov a {
+    color: #2c82c9;
+    text-decoration: underline;
+}
+
+.powered_malcov.show_copyright {
+  display: none;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.powered_malcov a:hover {
+    text-decoration: none;
+}
+
+.input_name_clean_form {
+    font-size: 14px;
+    color: #666;
+    padding: 22px 0 4px 3px;
+}
+
+.f_input_clean_form {
+    border: 1px solid #e2e2e2;
+    width: 100%;
+    height: 49px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .1) inset;
+    padding: 0 15px;
+    color: #666 !important;
+    font-size: 18px;
+    transition: .2s;
+    background: #fff !important;
+}
+
+.f_input_clean_form:focus {
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, .1) inset,  0px 0px 4px 0px rgba(49, 177, 226, .8);
+    border: 1px solid #31b1e2;
+    transition: .2s;
+}
+
+.form_block_clean_form {
+    padding: 3px 29px 25px 29px;
+}
+
+.politik {
+    font-size: 14px;
+    color: #666;
+    line-height: 16px;
+    padding: 24px 0 0 0
+}
+
+.politik a {
+    color: #666;
+    text-decoration: none;
+    cursor: default;
+}
+
+.politik a:hover {
+    color: #666;
+    cursor: default;
+    border-bottom: 0;
+    text-decoration: none;
+}
+
+.fbutton_clean_form {
+    display: block;
+    height: 45px;
+    border: 0;
+    border-bottom: 2px solid #23c659;
+    border-radius: 4px;
+    background: #23c659;
+    color: #fff;
+    text-shadow: 0 1px 0 #2969b0;
+    font-weight: 700;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    margin: 24px 0 0 0;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    width: 205px;
+    cursor: pointer;
+}
+.fbutton_clean_form:hover{
+   opacity: 0.8;
+}
+
+.footer_clean_form div {
+    height: 4px;
+    width: 100%;
+    border-left: 1px solid #bebebe;
+    border-right: 1px solid #bebebe;
+    border-bottom: 1px solid #bebebe;
+    border-radius: 0 0 4px 4px;
+    background: #fff;
+}
+
+.footer_clean_form span{
+    background: #fff;
+    display: block;
+}
+
+#result-registration font {
+    font-size: 12px;
+    display: block;
+    margin: 5px 0 -4px 0;
+}
+
+#result-registration font li {
+    list-style-type: none;
+}
+
+.close_clean_form {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    cursor: pointer;
+    z-index: 150;
+    background-size: cover !important;
+    width: 20px;
+    height: 20px;
+    opacity: 0.6;
+    transition: .2s;
+}
+
+.close_clean_form:hover {
+    opacity: 0.8;
+    transition: .2s;
+}
+
+.validation_ok {
+    display: block;
+    border-radius: 4px;
+    border: 1px dashed #ddd;
+    padding: 11px 14px;
+    margin: 15px;
+}
+
+.validation_ok div {
+    padding: 8px 0 0 0;
+}
+
+.validation_ok a {
+    color: #2c82c9;
+    text-decoration: underline;
+}
+
+.validation_ok a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1600px) {
+   body{
+       zoom: 80%;
+   }
+}
+
+@media screen and (max-width: 1400px) {
+   body{
+       zoom: 70%;
+   }
+}
+@media screen and (max-width: 1300px) {
+   body{
+       zoom: 65%;
+   }
+}
+
+@media screen and (max-width: 1200px) {
+   body{
+       zoom: 60%;
+   }
+}
+
+@media screen and (max-width: 1100px) {
+   body{
+       zoom: 55%;
+   }
 }
