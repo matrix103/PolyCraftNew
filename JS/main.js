@@ -9,8 +9,8 @@ let navMobileOutside =  document.querySelector('.header__mobile');
 document.addEventListener('click', outsideEvtListener);
 
 function outsideEvtListener(evt) {
-   console.log(evt.target);
-   console.log(navMobileOutside);
+   // console.log(evt.target);
+   // console.log(navMobileOutside);
     if (navMobileOutside.contains(evt.target)) {
       document.querySelector('.header__mobile').classList.remove("scroll");
     }
